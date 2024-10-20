@@ -3,28 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <title>Restaurant Apps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
-    <header class="navigation container">
-      <nav>
-        <img src="./images/logo.svg" alt="Logo Lorem" />
-        <div>
-          <a href="#"><span>Favorite</span></a>
-          <a href="https://www.google.com"><span>About Us</span></a>
+    <a href="#restaurant-list" class="skip-action">Skip To Content</a>
+    <header class="navigation border-b">
+      <nav class="container">
+        <div class="navigation-content">
+          <img src="./images/logo.svg" alt="Logo Lorem" />
+          <div class="navbar-action">
+            <button class="hamburger-menu">
+              <i class="fa fa-bars"></i>
+            </button>
+            <div class="navbar-item">
+              <a href="#" class="button font-bold">Favorite</a>
+              <a href="https://www.google.com" class="button font-bold"
+                >About Us</a
+              >
+            </div>
+          </div>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="container header-wrapper">
+    <main id="main-wrapper" class="container">
+      <section class="jumbroton-wrapper">
         <div class="image-wrapper">
           <img src="./images/heros/hero-image_2.jpg" width="450" alt="" />
+          <h1 class="font-bold">Selamat datang di restoku!</h1>
         </div>
-        <h1 class="header-text">Selamat datang di restoku!</h1>
       </section>
-      <section class="container">
-        <h2>Daftar Restaurant</h2>
+      <section id="restaurant-list">
+        <h2 class="font-semibold">Daftar Restaurant</h2>
         <card-list></card-list>
       </section>
     </main>
+    <footer class="container">
+      <p>&copy;DBS Expert Weekly Restoku</p>
+    </footer>
   </body>
 </html>

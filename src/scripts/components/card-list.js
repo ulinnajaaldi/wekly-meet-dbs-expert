@@ -18,7 +18,7 @@ class CardList extends HTMLElement {
     const wrapper = document.createElement('div')
     wrapper.classList.add('card-container')
 
-    const mappingData = this._data.restaurants.map((item) => {
+    const mappingData = this._data.restaurants?.map((item) => {
       const restaurant = document.createElement('card-item')
       restaurant.setValue(item)
 
@@ -27,7 +27,11 @@ class CardList extends HTMLElement {
 
     this.innerHTML = ''
     this.append(wrapper)
-    wrapper.append(...mappingData)
+    if (mappingData) {
+      mappingData.forEach((item) => {
+        wrapper.append(item)
+      })
+    }
   }
 }
 

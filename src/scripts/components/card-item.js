@@ -32,7 +32,9 @@ class CardItem extends HTMLElement {
         <div class="card-wrapper">
             <img src=${this._restaurant.pictureId} />
             <div class="card-content">
-              <h3><a> ${this._restaurant.name} </a></h3>
+              <a href="#" class="font-semibold">
+                ${this._restaurant.name}
+              </a>
               <p>city: ${this._restaurant.city}</p>
               <p>Rating: ${this._restaurant.rating}</p>
               <p class="line-clamp">

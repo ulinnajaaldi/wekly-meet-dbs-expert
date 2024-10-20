@@ -1,0 +1,138 @@
+@import 'utilities';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  @extend .font-regular;
+  color: $color-text;
+  scroll-behavior: smooth;
+}
+
+button {
+  border: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.skip-action {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 999;
+  background-color: $color-text;
+  color: $color-primary;
+  padding: 12px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: $color-bg;
+
+  .navigation-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0 8px 0;
+
+    .navbar-action {
+      .hamburger-menu {
+        display: none;
+      }
+
+      .navbar-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+    }
+  }
+}
+
+.jumbroton-wrapper {
+  margin-top: 80px;
+
+  .image-wrapper {
+    position: relative;
+    min-width: 1000px;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-size: 24px;
+      background-color: $color-secondary;
+      padding: 4px 8px;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+#restaurant-list {
+  padding-top: 80px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card-wrapper {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 12px;
+
+  img {
+    width: 100%;
+    height: 220px;
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover;
+  }
+
+  a {
+    display: block;
+    min-height: 44px;
+    min-width: 44px;
+    text-decoration: none;
+  }
+
+  .card-content {
+    padding: 0px 8px 0px 8px;
+  }
+}
+
+footer {
+  padding: 16px 0 16px 0;
+  text-align: center;
+}

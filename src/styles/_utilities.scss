@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+// Color Variables
+$color-primary: #eddfe0;
+$color-secondary: #f5f5f7;
+$color-tertiary: #b7b7b7;
+$color-text: #705c53;
+$color-bg: #ffff;
+
+// Transition Variable
+$transition-all: (
+  transition-property: all,
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
+  transition-duration: 150ms,
+);
+
+@mixin transition-all {
+  transition-property: map-get($transition-all, transition-property);
+  transition-timing-function: map-get(
+    $transition-all,
+    transition-timing-function
+  );
+  transition-duration: map-get($transition-all, transition-duration);
+}
+
+// Font Class
+.font-thin {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.font-light {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300 !important;
+  font-style: normal;
+}
+
+.font-regular {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400 !important;
+  font-style: normal;
+}
+
+.font-medium {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.font-semibold {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600 !important;
+  font-style: normal;
+}
+
+.font-bold {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700 !important;
+  font-style: normal;
+}
+
+.font-extrabold {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800 !important;
+  font-style: normal;
+}
+
+// Class Utilities
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1536px;
+
+  @media (max-width: 1280px) {
+    max-width: 1280px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 640px) {
+    max-width: 640px;
+  }
+}
+
+.button {
+  @include transition-all;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  min-height: 44px !important;
+  min-width: 44px !important;
+
+  &:hover {
+    background-color: $color-secondary;
+  }
+}
+
+.line-clamp {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.border-b {
+  border-bottom: 1px solid $color-text;
+}
+
+.bg-blur {
+  filter: blur(12px);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
