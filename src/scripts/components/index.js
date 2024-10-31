@@ -1,2 +1,4 @@
 import './card-item'
-import './card-list'
+import './navigation-bar'
+import './footer'
+import './loader-element'

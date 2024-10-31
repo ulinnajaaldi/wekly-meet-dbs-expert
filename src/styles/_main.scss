@@ -9,11 +9,174 @@
   scroll-behavior: smooth;
 }
 
+main {
+  margin-top: 80px;
+  min-height: 80dvh;
+}
+
 button {
   border: 0;
   background: none;
   box-shadow: none;
   border-radius: 0px;
+}
+
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #1612ee;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.details-title {
+  font-size: 24px;
+  color: $color-text;
+  span {
+    font-size: 18px;
+  }
+}
+.details-subheader {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+}
+.details-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+.details-content-item {
+  display: flex;
+  .details-content-title {
+    width: 80px;
+    @extend .font-medium;
+  }
+}
+.details-description {
+  text-align: justify;
+  font-size: 14px;
+}
+.details-subtitle {
+  font-size: 20px;
+  color: $color-text;
+  text-align: center;
+}
+.details-review-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  row-gap: 8px;
+  column-gap: 12px;
+  color: $color-text;
+  padding-top: 12px;
+}
+
+.details-review-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  border: 1px solid $color-text;
+  border-radius: 8px;
+  padding: 12px;
+  gap: 4px;
+  .review-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .review-item-user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      h4 {
+        @extend .font-medium;
+      }
+    }
+    .review-item-date {
+      color: $color-text;
+      font-size: 14px;
+    }
+  }
+  .review-item-desc {
+    border-top: 1px solid $color-text;
+    padding-top: 10px;
+    font-size: 14px;
+  }
+}
+
+.form-review {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid $color-text;
+  border-radius: 8px;
+  padding: 20px;
+  gap: 8px;
+  margin-top: 20px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  label {
+    font-size: 14px;
+    color: $color-text;
+  }
+  input,
+  textarea {
+    border: 1px solid $color-text;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+  }
+  button {
+    border: 1px solid $color-text;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    color: $color-text;
+    background-color: $color-primary;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
 }
 
 .skip-action {
@@ -64,8 +227,6 @@ button {
 }
 
 .jumbroton-wrapper {
-  margin-top: 80px;
-
   .image-wrapper {
     position: relative;
     min-width: 1000px;
