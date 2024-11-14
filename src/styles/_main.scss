@@ -21,6 +21,25 @@ button {
   border-radius: 0px;
 }
 
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a4a4a4;
+
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
 .loader-wrapper {
   display: flex;
   justify-content: center;

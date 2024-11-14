@@ -14,7 +14,7 @@ class NavigationBar extends HTMLElement {
               <i class="fa fa-bars"></i>
             </button>
             <div class="navbar-item">
-              <a href="#" class="button font-bold">Favorite</a>
+              <a href="#/favorite" class="button font-bold">Favorite</a>
               <a href="https://www.google.com" class="button font-bold"
                 >About Us</a
               >
